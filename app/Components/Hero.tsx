@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
+    <section className="relative min-h-screen flex items-center justify-center px-4 pt-20 bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent" />
 
       <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
