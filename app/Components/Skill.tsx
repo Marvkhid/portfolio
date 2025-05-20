@@ -79,7 +79,7 @@ const skills = [
 
 export default function Skill() {
   return (
-   <section className="bg-gray-200 py-16 px-2 sm:py-20 sm:px-6 lg:px-8 text-white-600 overflow-hidden">
+   <section className="bg-gray-200 py-8 px-2 sm:py-8 sm:px-6 lg:px-8 text-white-600 overflow-hidden">
   <div className="max-w-7xl mx-auto text-center overflow-hidden space-y-10 sm:space-y-12">
     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-800 animate-fade-in">
       My Skill Set

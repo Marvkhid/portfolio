@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import {Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -46,15 +46,14 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-10 px-4 bg-gray-200 sm:px-6 md:px-8 text-black">
+    <section className=" px-4 bg-gray-200 sm:px-6 md:px-8 text-black">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-purple-700 mb-10">
           Projects I&apos;ve Built
         </h2>
 
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          navigation
+                <Swiper
+          modules={[Autoplay]} 
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
             0: { slidesPerView: 1 },
@@ -65,6 +64,7 @@ export default function Projects() {
           spaceBetween={20}
           loop
         >
+
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
               <div className="bg-white rounded-xl shadow-md p-5 h-full flex flex-col">
@@ -86,16 +86,7 @@ export default function Projects() {
           ))}
         </Swiper>
 
-        {/* Summary */}
-        <div className="mt-10 max-w-3xl mx-auto text-center px-2 sm:px-4">
-          <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 animate-fade-in-up">
-            Building Beyond Code
-          </h3>
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed animate-fade-in delay-200">
-            These projects reflect my hands-on experience solving real problems with tech — from user-friendly dashboards
-            and secure platforms to educational tools and creative AI interfaces. I combine clean design with performance-driven code to create experiences that work beautifully.
-          </p>
-        </div>
+      
       </div>
     </section>
   );

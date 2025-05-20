@@ -43,7 +43,7 @@ export default function Hero() {
             </Button>
           </div>
 
-          <div className="flex justify-center md:justify-start gap-6 mt-8 text-2xl">
+          <div className="flex justify-center md:justify-start gap-6 mt-8 pb-12 text-2xl">
             <a href="https://github.com/Marvkhid" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400">
               <FaGithub />
             </a>

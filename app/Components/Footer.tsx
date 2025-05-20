@@ -2,12 +2,23 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white text-lg">
+    <footer className=" pb-8 bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white text-lg">
       {/* Marquee section */}
-      <div className="overflow-hidden border-t border-gray-700">
+        {/* Summary */}
+        <div className="pt-8 max-w-3xl mx-auto text-center px-2 sm:px-4">
+          <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-4 animate-fade-in-up">
+            Building Beyond Code
+          </h3>
+          <p className="text-white text-sm sm:text-base leading-relaxed animate-fade-in delay-200">
+            I thrive in fast-paced environments and adapt quickly to new technologies, tools, and team structures. 
+            Whether building user interfaces, integrating APIs, or optimizing performance, I bring a problem-solving
+             mindset and a commitment to clean, scalable code—always ready to contribute value across any role or stack.
+          </p>
+        </div>
+      <div className="overflow-hidden">
         <div className="whitespace-nowrap animate-marquee py-2 text-center text-sm text-gray-300">
-         <p> Thanks for checking up on me 😊</p>
-         <p>Awaiting your feedback!</p>
+         <p className="text-lg font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse"> Thanks for checking up on me</p>
+         <p className="text-lg sm font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse">Awaiting your feedback!</p>
         </div>
       </div>
 
