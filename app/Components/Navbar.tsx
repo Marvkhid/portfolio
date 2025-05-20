@@ -17,7 +17,6 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-8">
           <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Home</Link>
           <Link href="/projects" className="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Projects</Link>
-          <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">About</Link>
           <Link href="/contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Contact</Link>
         </div>
         <div className="md:hidden">
@@ -29,8 +28,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 px-4 pt-2 pb-4 space-y-2">
           <Link href="/" className="block text-gray-800 dark:text-gray-200">Home</Link>
-          <Link href="/projects" className="block text-gray-800 dark:text-gray-200">Projects</Link>
-          <Link href="/about" className="block text-gray-800 dark:text-gray-200">About</Link>
+          <Link href="#projects" className="block text-gray-800 dark:text-gray-200">Projects</Link>
           <Link href="/contact" className="block text-gray-800 dark:text-gray-200">Contact</Link>
         </div>
       )}
