@@ -15,7 +15,7 @@ export default function Hero() {
         {/* Image */}
         <div className="flex-shrink-0 w-48 h-48 rounded-full overflow-hidden border-4 border-pink-600">
           <Image
-            src="/marvell.jpg"
+            src="/marvel.jpg"
             alt="Marvel"
             width={700}
             height={700}
