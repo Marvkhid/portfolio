@@ -1,21 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-
-
 export const metadata: Metadata = {
-  title: "Marvel's Portfolio",
-  description: "Front-end developer with Nextjs",
+  title: "Marvel Adeniyi - Frontend Engineer",
+  description: "Front-end developer & Tech Enthusiast",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="overflow-x-hidden">
+      <body className="overflow-x-hidden antialiased">
         {children}
       </body>
     </html>
