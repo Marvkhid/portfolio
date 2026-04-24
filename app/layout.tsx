@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://marvel-port.vercel.app'),
   title: "Marvel Adeniyi - Frontend Engineer",
   description: "Front-end developer & Tech Enthusiast",
 };

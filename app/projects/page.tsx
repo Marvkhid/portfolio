@@ -38,14 +38,7 @@ export default function ProjectsPage() {
     <>
       <Navbar />
 
-      <main
-        className="min-h-screen"
-        style={{
-          background:
-            'linear-gradient(160deg, #e8f4fd 0%, #f0e8fa 40%, #e0f0fb 70%, #fbe8f4 100%)',
-          fontFamily: "'DM Sans', sans-serif",
-        }}
-      >
+      <main className="min-h-screen font-[DM_Sans] bg-[linear-gradient(160deg,#e8f4fd_0%,#f0e8fa_40%,#e0f0fb_70%,#fbe8f4_100%)]">
         <ProjectsHero />
         <ProjectsFlow />
       </main>
