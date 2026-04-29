@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Download, ArrowUpRight, ChevronRight } from "lucide-react";
 
-const images = ["/marvelblue.jfif", "/marvel2.jpeg", "/profile.jpg"];
+const images = ["/marvelblue.jpg", "/marvel2.jpeg", "/profile.jpg"];
 
 const roles = [
   "Frontend Engineer",

@@ -60,7 +60,7 @@ export default function ProjectsFlow() {
               }}
             >
               <Image
-                src="/Marvelsuit.jfif"
+                src="/Marvelsuit.jpg"
                 alt="Marvel"
                 fill
                 className="object-cover"

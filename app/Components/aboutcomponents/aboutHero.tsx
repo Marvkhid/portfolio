@@ -89,7 +89,7 @@ export default function AboutHero() {
         {/* Main image */}
         <div className="relative w-60 h-60 md:w-80 md:h-80 rounded-3xl overflow-hidden border-4 border-white shadow-2xl shadow-sky-200 z-10">
           <Image
-            src="/coren.jfif"
+            src="/coren.jpg"
             alt="Marvel Adeniyi"
             fill
             className="object-cover object-center"

@@ -154,7 +154,7 @@ export default function HeroSection() {
             }}
           >
             <Image
-              src="/marvelsuit.jfif"
+              src="/marvelsuit.jpg"
               alt="Marvel — Web Designer & Developer"
               fill
               sizes="360px"
@@ -176,7 +176,7 @@ export default function HeroSection() {
             display: 'flex', alignItems: 'center', gap: 10,
           }}>
             <div style={{ width: 36, height: 36, borderRadius: '50%', overflow: 'hidden', flexShrink: 0, position: 'relative', border: '2px solid rgba(14,165,197,0.3)' }}>
-              <Image src="/marvellaunch.jfif" alt="Marvel" fill sizes="36px" style={{ objectFit: 'cover' }} />
+              <Image src="/marvellaunch.jpg" alt="Marvel" fill sizes="36px" style={{ objectFit: 'cover' }} />
             </div>
             <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: '#0369a1', fontWeight: 600 }}>
               ⭐ 10+ Happy Clients

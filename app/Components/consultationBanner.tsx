@@ -34,7 +34,7 @@ export default function ConsultationBanner() {
           }}
         >
           <Image
-            src="/marveldevround.jfif"
+            src="/marveldevround.jpg"
             alt="Book a free consultation"
             fill
             sizes="200px"

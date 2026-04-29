@@ -8,7 +8,7 @@ export const SERVICES: Service[] = [
     title1: 'Get Online',
     title2: 'Website',
     description: 'A simple, polished website — built to get you online, fast.',
-    image: '/marvellogohead.jfif',
+    image: '/marvellogohead.jpg',
     faqs: [
       {
         q: 'Tell me more',
@@ -46,7 +46,7 @@ export const SERVICES: Service[] = [
     title1: 'Revamp',
     title2: 'Website',
     description: "Give your existing site a fresh, strategic new look you'll love.",
-    image: '/marvelrevamp.jfif',
+    image: '/marvelrevamp.jpg',
     faqs: [
       {
         q: 'Tell me more',
@@ -83,7 +83,7 @@ export const SERVICES: Service[] = [
     title2: 'Website',
     description:
       'A fully functional online store designed to help you sell with confidence — built right, not rushed.',
-    image: '/marvelecommerce.jfif',
+    image: '/marvelecommerce.jpg',
     faqs: [
       {
         q: 'Tell me more',
@@ -110,7 +110,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: 'Investment',
-        a: 'Starting from $500. Timeline: 10–14 business days.',
+        a: 'Starting from $500. Timeline: 10 – 14 business days.',
       },
     ],
   },
@@ -121,7 +121,7 @@ export const SERVICES: Service[] = [
     title1: 'Shop &',
     title2: 'Sell',
     description: 'Everything you need to start selling online beautifully and professionally.',
-    image: '/marvelecommerce.jfif',
+    image: '/marvelecommerce.jpg',
     faqs: [
       {
         q: 'Tell me more',
@@ -156,7 +156,7 @@ export const SERVICES: Service[] = [
     title1: 'Done For',
     title2: 'You',
     description: "Your full online presence handled from start to finish — you don't lift a finger.",
-    image: '/marvellaunch.jfif',
+    image: '/marvellaunch.jpg',
     faqs: [
       {
         q: 'Tell me more',
@@ -192,7 +192,7 @@ export const SERVICES: Service[] = [
     title1: 'Monthly',
     title2: 'Retainer',
     description: 'Ongoing care and support to keep your website running beautifully.',
-    image: '/marvellogohead.jfif',
+    image: '/marvellogohead.jpg',
     faqs: [
       {
         q: 'Tell me more',
@@ -230,7 +230,7 @@ export const TESTIMONIALS: Testimonial[] = [
     country: '🇳🇬 Nigeria',
     text: 'He completely transformed how we show up online. The security platform he built for us loads incredibly fast, looks stunning, and has directly increased our conversion rate. Professional, creative, and truly understood our brand from day one.',
     initials: 'IO',
-    image: '/testimonial-1.jfif',
+    image: '/testimonial-1.jpg',
   },
   {
     name: 'Amanda Johnson',
@@ -239,7 +239,7 @@ export const TESTIMONIALS: Testimonial[] = [
     country: '🇳🇬 Nigeria',
     text: 'I had a vague idea of what I wanted and he turned it into something far better than I imagined. The website he built positions us as a serious NGO. Every detail was considered, and the handover process was smooth and thorough.',
     initials: 'AJ',
-    image: '/testimonial-2.jfif',
+    image: '/testimonial-2.jpg',
   },
   {
     name: 'Tobi Adeyemi',
@@ -248,7 +248,7 @@ export const TESTIMONIALS: Testimonial[] = [
     country: '🇳🇬 Nigeria',
     text: 'He crafted a new ui design for us. Our revamped website now reflects where we actually are as a brand — modern, credible, and conversion-focused. Easily one of the best decisions we made in 2025.',
     initials: 'TA',
-    image: '/testimonial-5.jfif',
+    image: '/testimonial-5.jpg',
   },
   {
     name: 'Sophia Müller',
@@ -257,7 +257,7 @@ export const TESTIMONIALS: Testimonial[] = [
     country: '🇩🇪 Germany',
     text: 'No hype, Marvel is good at what he does. He took the time to understand our brand and goals, and the result was a website that not only looks fantastic but also performs exceptionally well. We saw an immediate uptick in user engagement and conversions after launch.',
     initials: 'SM',
-    image: '/testimonial-4.jfif',
+    image: '/testimonial-4.jpg',
   },
   {
     name: 'James Okafor',
@@ -275,6 +275,6 @@ export const TESTIMONIALS: Testimonial[] = [
     country: '🇩🇪 Germany',
     text: 'One thing i loved about Marvel was that he took a complicated brief and made it look effortless. The website is sleek, fast, and has earned us real compliments from investors and users alike. He was patient with every revision request and never made us feel like a burden.',
     initials: 'PN',
-    image: '/testimonial-6.jfif',
+    image: '/testimonial-6.jpg',
   },
 ];

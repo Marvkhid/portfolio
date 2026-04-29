@@ -83,7 +83,7 @@ const promises = [
     id: "support",
     title: "Support",
     description:
-      "I don’t disappear after delivery. From launch and beyond, I stay involved—providing support, updates, and guidance whenever you need it. Your success isn’t a one-time goal; it’s a long-term commitment.",
+      "I don&apos;t disappear after delivery. From launch and beyond, I stay involved—providing support, updates, and guidance whenever you need it. Your success isn&apos;t a one-time goal; it&apos;s a long-term commitment.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -100,10 +100,12 @@ const promises = [
 function PromiseCard({
   item,
   visible,
+  isMobile,
 }: {
   item: (typeof promises)[0];
   visible: boolean;
   index: number;
+  isMobile: boolean;
 }) {
   const [hovered, setHovered] = useState(false);
   const [mouse, setMouse] = useState({ x: 0.5, y: 0.5 });
@@ -115,8 +117,12 @@ function PromiseCard({
     setMouse({ x: (e.clientX - r.left) / r.width, y: (e.clientY - r.top) / r.height });
   };
 
-  const rx = hovered ? (mouse.y - 0.5) * -12 : 0;
-  const ry = hovered ? (mouse.x - 0.5) * 12 : 0;
+  // Disable tilt on mobile — too janky on touch
+  const rx = hovered && !isMobile ? (mouse.y - 0.5) * -12 : 0;
+  const ry = hovered && !isMobile ? (mouse.x - 0.5) * 12 : 0;
+
+  // On mobile, flatten the rotate so stacked cards don't clip/overflow
+  const baseRotate = isMobile ? "0deg" : item.rotate;
 
   return (
     <div
@@ -129,8 +135,8 @@ function PromiseCard({
         transform: visible
           ? hovered
             ? `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-10px) scale(1.04) rotate(0deg)`
-            : `perspective(900px) rotateX(0) rotateY(0) translateY(0) scale(1) rotate(${item.rotate})`
-          : `perspective(900px) translateY(36px) scale(0.94) rotate(${item.rotate})`,
+            : `perspective(900px) rotateX(0) rotateY(0) translateY(0) scale(1) rotate(${baseRotate})`
+          : `perspective(900px) translateY(36px) scale(0.94) rotate(${baseRotate})`,
         transition: visible
           ? hovered
             ? `opacity 0.6s ease ${item.delay}ms, transform 0.1s ease-out, box-shadow 0.2s ease`
@@ -165,37 +171,8 @@ function PromiseCard({
       }} />
 
       <div style={{ position: "relative", zIndex: 1 }}>
-        {/* Title */}
-        <h3 style={{
-          fontFamily: "'DM Sans', sans-serif",
-          fontWeight: 700,
-          fontStyle: "normal",
-          fontSize: "0.78rem",
-          color: "#071b2e",
-          marginBottom: 12,
-          letterSpacing: "0.1em",
-          textTransform: "uppercase" as const,
-        }}>
-          {item.title}
-        </h3>
-
-        {/* Description */}
-        <p style={{
-          fontFamily: "'DM Sans', sans-serif",
-          fontWeight: 300,
-          fontSize: "0.82rem",
-          color: "#3a4a5a",
-          lineHeight: 1.7,
-          marginBottom: 20,
-        }}>
-          {item.description}
-        </p>
-
-        {/* Icon — bottom right */}
-        <div style={{
-          display: "flex",
-          justifyContent: "flex-end",
-        }}>
+        {/* Icon + Title row */}
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
           <div style={{
             width: 38,
             height: 38,
@@ -206,12 +183,38 @@ function PromiseCard({
             alignItems: "center",
             justifyContent: "center",
             color: item.accent,
+            flexShrink: 0,
             transform: hovered ? "scale(1.15) rotate(-8deg)" : "scale(1) rotate(0deg)",
             transition: "transform 0.4s cubic-bezier(0.34,1.56,0.64,1)",
           }}>
             {item.icon}
           </div>
+
+          <h3 style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontWeight: 700,
+            fontStyle: "normal",
+            fontSize: "0.78rem",
+            color: "#071b2e",
+            margin: 0,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase" as const,
+          }}>
+            {item.title}
+          </h3>
         </div>
+
+        {/* Description */}
+        <p style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontWeight: 300,
+          fontSize: "0.82rem",
+          color: "#3a4a5a",
+          lineHeight: 1.7,
+          margin: 0,
+        }}>
+          {item.description}
+        </p>
       </div>
     </div>
   );
@@ -220,6 +223,7 @@ function PromiseCard({
 /* ─── Main Section ───────────────────────────────────────────── */
 export default function MyPromiseToYou() {
   const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -231,19 +235,63 @@ export default function MyPromiseToYou() {
     return () => obs.disconnect();
   }, []);
 
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,500&family=DM+Sans:wght@300;400;500&display=swap');
+
         @keyframes pulseRing {
           0% { transform: scale(0.95); opacity: 0.6; }
           70% { transform: scale(1.1); opacity: 0; }
           100% { transform: scale(0.95); opacity: 0; }
         }
+
+        .promise-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 28px 24px;
+        }
+
+        /* 2-column on tablets */
+        @media (max-width: 900px) {
+          .promise-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 18px;
+          }
+        }
+
+        /* 1-column on phones */
+        @media (max-width: 560px) {
+          .promise-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+          }
+        }
+
+        /* Tighter section padding on mobile */
+        @media (max-width: 640px) {
+          .promise-section {
+            padding: 64px 16px 80px !important;
+          }
+          .promise-header {
+            margin-bottom: 36px !important;
+          }
+          .promise-footer {
+            margin-top: 44px !important;
+          }
+        }
       `}</style>
 
       <section
         ref={sectionRef}
+        className="promise-section"
         style={{
           position: "relative",
           padding: "96px 20px 110px",
@@ -261,12 +309,15 @@ export default function MyPromiseToYou() {
         <div style={{ position: "relative", maxWidth: 1160, margin: "0 auto" }}>
 
           {/* ── Header ── */}
-          <div style={{
-            marginBottom: 56,
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(22px)",
-            transition: "opacity 0.7s ease, transform 0.7s ease",
-          }}>
+          <div
+            className="promise-header"
+            style={{
+              marginBottom: 56,
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0)" : "translateY(22px)",
+              transition: "opacity 0.7s ease, transform 0.7s ease",
+            }}
+          >
             {/* Eyebrow */}
             <div style={{
               display: "inline-flex", alignItems: "center", gap: 7,
@@ -299,25 +350,24 @@ export default function MyPromiseToYou() {
             </h2>
           </div>
 
-          {/* ── Cards grid — 3 cols, 2 rows, tilted ── */}
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "28px 24px",
-          }}>
+          {/* ── Cards grid ── */}
+          <div className="promise-grid">
             {promises.map((item, i) => (
-              <PromiseCard key={item.id} item={item} visible={visible} index={i} />
+              <PromiseCard key={item.id} item={item} visible={visible} index={i} isMobile={isMobile} />
             ))}
           </div>
 
           {/* ── Bottom note ── */}
-          <div style={{
-            marginTop: 60,
-            textAlign: "center",
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(16px)",
-            transition: "opacity 0.7s ease 0.6s, transform 0.7s ease 0.6s",
-          }}>
+          <div
+            className="promise-footer"
+            style={{
+              marginTop: 60,
+              textAlign: "center",
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0)" : "translateY(16px)",
+              transition: "opacity 0.7s ease 0.6s, transform 0.7s ease 0.6s",
+            }}
+          >
             <p style={{
               fontFamily: "'Fraunces', serif",
               fontStyle: "italic",

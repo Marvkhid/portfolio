@@ -20,7 +20,7 @@ export default function FaqSection() {
         <div className="absolute -bottom-4 -right-4 w-full h-full rounded-3xl bg-blue-100 border border-blue-200" />
         <div className="relative w-full aspect-square rounded-3xl overflow-hidden border-2 border-white shadow-xl shadow-sky-100">
           <Image
-            src="/marvelhead.jfif"
+            src="/marvelhead.jpg"
             alt="Marvel Adeniyi"
             fill
             className="object-cover object-center"

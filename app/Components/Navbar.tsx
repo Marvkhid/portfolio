@@ -7,12 +7,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Skills", href: "/skills" },
-  { label: "Projects", href: "/projects" },
-  { label: "Services", href: "/services" },
-  { label: "Contact", href: "/contact" },
+  { label: "HOME", href: "/" },
+  { label: "ABOUT", href: "/about" },
+  { label: "SKILLS", href: "/skills" },
+  { label: "BLOG", href: "/blog" },
+  { label: "PROJECTS", href: "/projects" },
+  { label: "SERVICES", href: "/services" },
+  { label: "CONTACT", href: "/contact" },
 ];
 
 export default function Navbar() {

@@ -19,7 +19,7 @@ export default function AboutStory() {
         <div className="absolute -top-4 -left-4 w-full h-full rounded-3xl bg-sky-100 border border-sky-200" />
         <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden border-2 border-white shadow-xl shadow-sky-100">
           <Image
-            src="/marvelblue.jfif"
+            src="/marvelblue.jpg"
             alt="Marvel Adeniyi at work"
             fill
             className="object-cover object-top"
