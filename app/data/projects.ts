@@ -48,17 +48,17 @@ export const projects: Project[] = [
   tags: ['EdTech', 'Training', 'Innovation', 'Collaboration'],
 },
   {
-    id: '04',
-    tag: 'Security',
-    title: 'Babs Security',
-    subtitle: 'Trust-first design for a serious industry',
-    description:
-      'Security clients need to feel safe before they even pick up the phone. We built Babs Security a site that radiates professionalism, credibility, and calm authority — without feeling cold.',
-   Image: '/babs.png',
-    gradient: 'from-slate-400/30 via-blue-400/20 to-indigo-500/30',
-    accentColor: '#60a5fa',
-    tags: ['Branding', 'Security', 'Conversion'],
-  },
+  id: '04',
+  tag: 'Marketplace',
+  title: 'KOVA Shop',
+  subtitle: 'A trusted marketplace for digital services',
+  description:
+    'KOVA Shop is a full-stack marketplace connecting buyers and sellers of digital services. Built with trust, clarity, and speed at its core, it simplifies how people discover, order, and deliver digital work online.',
+  Image: '/kova.png',
+  gradient: 'from-slate-400/30 via-blue-400/20 to-indigo-500/30',
+  accentColor: '#60a5fa',
+  tags: ['Marketplace', 'Full-stack', 'Digital Services'],
+},
   {
     id: '05',
     tag: 'Travel & Booking',

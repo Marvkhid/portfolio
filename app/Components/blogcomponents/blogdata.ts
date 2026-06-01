@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
     author: 'Marvel Adeniyi',
     date: 'Mar 24, 2026',
     readTime: '8 min read',
-    image: 'https://images.unsplash.com/photo-1686191128892-3b37add4c844?w=800&q=80',
+    image:  'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
   },
   {
     id: '5',

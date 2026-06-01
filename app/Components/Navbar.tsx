@@ -60,7 +60,7 @@ export default function Navbar() {
             >
               Marvel
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">
-                .dev
+                led
               </span>
             </motion.span>
           </Link>

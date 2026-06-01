@@ -6,12 +6,12 @@ import { useRef, useState, useEffect, useCallback } from "react";
 /* ─── Data ──────────────────────────────────────────────────── */
 const projects = [
   {
-    name: "Boldo",
-    image: "/boldo.png",
+    name: "Kova",
+    image: "/kova.png",
     description:
-      "Improves website logistics and optimises user conversion flow for modern SaaS products.",
-    tech: ["Next.js", "Tailwind", "Vercel"],
-    link: "https://boldo-ml9g.vercel.app/",
+      "Kova is a modern e-commerce platform for fashion brands, offering seamless shopping experiences with AI-driven personalization and real-time inventory management.",
+    tech: ["Next.js", "NestJS", "Tailwind", "Vercel"],
+    link: "https://kova-shoppvercel.app/",
     accent: "#2b9de8",
     index: "01",
   },

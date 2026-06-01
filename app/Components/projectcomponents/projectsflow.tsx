@@ -60,11 +60,11 @@ export default function ProjectsFlow() {
               }}
             >
               <Image
-                src="/Marvelsuit.jpg"
+                src="/mine.jpeg"
                 alt="Marvel"
                 fill
                 className="object-cover"
-                sizes="160px"
+                sizes="200px"
               />
             </div>
           </div>

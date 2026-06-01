@@ -246,8 +246,7 @@ export default function Footer() {
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
                   }}>
-                    .dev
-                  </div>
+                    led                  </div>
                 </div>
 
                 {/* Shimmer underline */}
@@ -361,7 +360,7 @@ export default function Footer() {
                 margin: 0,
                 letterSpacing: "0.02em",
               }}>
-                Designed &amp; built by Marvel.dev
+                Designed &amp; built by Marvelled
               </p>
             </div>
           </div>
