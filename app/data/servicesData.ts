@@ -268,13 +268,13 @@ export const TESTIMONIALS: Testimonial[] = [
     initials: 'JO',
     image: '/trave.png',
   },
-  {
-    name: 'Priya Nair',
-    role: 'Product Manager',
-    company: 'Laycomms',
-    country: '🇩🇪 Germany',
-    text: 'One thing i loved about Marvel was that he took a complicated brief and made it look effortless. The website is sleek, fast, and has earned us real compliments from investors and users alike. He was patient with every revision request and never made us feel like a burden.',
-    initials: 'PN',
-    image: '/testimonial-6.jpg',
-  },
-];
+ {
+name: 'Dr. Priya Nair',
+role: 'Medical Director',
+company: 'Curano',
+country: '🇩🇪 Germany',
+text: 'I was referred by Marvel through a friend and explained the idea I had for Curano, a virtual medical assistant platform. From the beginning he understood the concept clearly and translated it into a working product that feels solid and reliable. Patients are now able to book consultations from anywhere in the world with ease, and I also have a dashboard where I can monitor appointments, activity, and key metrics across the system. The platform has made managing virtual care much more efficient and structured.',
+initials: 'PN',
+image: '/curano.png',
+},
+]
