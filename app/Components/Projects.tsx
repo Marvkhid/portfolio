@@ -36,13 +36,13 @@ const projects = [
     index: "03",
   },
   {
-    name: "Online Education Platform",
-    image: "/online.png",
+    name: "Marcus Reid Fitness",
+    image: "/marcus-reid.png",
     description:
-      "Learning platform for structured courses, assessments, and professional certification.",
-    tech: ["Next.js", "TypeScript", "Supabase"],
-    link: "https://online-education-page.vercel.app/",
-    accent: "#7dd3fc",
+      "Full-stack fitness coaching platform with personalized workout plans, progress tracking, and client management.",
+    tech: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
+    link: "https://marcus-reid.vercel.app/",
+    accent: "#0284c7",
     index: "04",
   },
   {

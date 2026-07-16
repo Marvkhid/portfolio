@@ -61,14 +61,14 @@ export const projects: Project[] = [
 },
   {
     id: '05',
-    tag: 'Travel & Booking',
-    title: 'Travel',
-    subtitle: 'Where wanderlust meets seamless booking',
+    tag: 'Fitness & Wellness',
+    title: 'Marcus Reid Fitness',
+    subtitle: 'Personalized fitness coaching and training',
     description:
-      'Travel needed a platform that made travel feel exciting again. From destination discovery to checkout, every step was designed to reduce friction and amplify the joy of planning a trip.',
-    Image: '/trave.png',
-    gradient: 'from-orange-300/30 via-rose-300/20 to-pink-400/30',
-    accentColor: '#fb7185',
-    tags: ['Booking', 'Travel', 'UX Flow'],
+      'Marcus Reid Fitness is a full-stack platform for personalized fitness coaching, offering tailored workout plans, progress tracking, and client management.',
+    Image: '/marcus-reid.png',
+    gradient: 'from-green-400/30 via-emerald-300/20 to-teal-500/30',
+    accentColor: '#10b981',
+    tags: ['Fitness', 'Wellness', 'Coaching'],
   },
 ];
